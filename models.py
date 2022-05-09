@@ -1,7 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
-
-
-db = SQLAlchemy()
+from __init_ import db
 
 
 class Sample(db.Model):
