@@ -14,11 +14,13 @@ def create_app():
     db.init_app(app)
 
     with app.app_context():
+        import models
+
         db.create_all()
 
         from routes import content, errors
 
-        app.register_blueprint(content.content_)
-        app.register_blueprint(errors.errors_)
+        app.register_blueprint(content.content)
+        app.register_blueprint(errors.errors)
 
         return app

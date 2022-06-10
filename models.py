@@ -1,4 +1,4 @@
-from __init_ import db
+from __init__ import db
 
 
 class Sample(db.Model):
